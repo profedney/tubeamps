@@ -1,0 +1,166 @@
+/* ===========================
+   Reset mínimo e base
+   =========================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Ubuntu, Arial, sans-serif;
+
+  background-color: #0e0e0e;
+  color: #e6e6e6;
+
+  line-height: 1.7;
+}
+
+/* ===========================
+   Layout geral
+   =========================== */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header > *,
+main > *,
+footer > * {
+  width: 100%;
+  max-width: 960px;
+  padding: 1.5rem;
+}
+
+/* ===========================
+   Header
+   =========================== */
+
+header {
+  border-bottom: 1px solid #222;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+header p {
+  margin-top: 0.4rem;
+  font-style: italic;
+  color: #aaa;
+}
+
+/* ===========================
+   Conteúdo principal
+   =========================== */
+
+main {
+  flex: 1;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  border-bottom: 1px solid #222;
+  padding-bottom: 0.3rem;
+}
+
+/* ===========================
+   Texto
+   =========================== */
+
+p {
+  margin: 0 0 1.2rem 0;
+}
+
+strong {
+  color: #ffffff;
+}
+
+em {
+  color: #cccccc;
+}
+
+/* ===========================
+   Listas
+   =========================== */
+
+ol {
+  padding-left: 1.4rem;
+  margin: 1.5rem 0 0 0;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+footer {
+  border-top: 1px solid #222;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ===========================
+   Links (futuro)
+   =========================== */
+
+a {
+  color: #cfa94a; /* dourado discreto */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Telas maiores
+   =========================== */
+
+@media (min-width: 768px) {
+
+  html {
+    font-size: 17px;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}

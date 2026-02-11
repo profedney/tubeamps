@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Tube Amps & FX</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- W3.CSS local -->
+  <link rel="stylesheet" href="assets/css/stylew3.css">
+
+  <!-- Fonte -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+  <!-- Font Awesome (pode virar local depois) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="w3-black">
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+       href="javascript:void(0)"
+       onclick="toggleMenu()"
+       title="Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="articles/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ARTIGOS</a>
+    <a href="contato.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTATO</a>
+  </div>
+</div>
+
+<!-- Menu mobile -->
+<div id="navMobile" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">ABOUT</a>
+  <a href="articles/" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">ARTIGOS</a>
+  <a href="contato.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">CONTATO</a>
+</div>
+
+<!-- Conteúdo -->
+<div class="w3-content" style="max-width:1200px;margin-top:64px">
+
+  <!-- Hero -->
+  <div class="w3-container w3-center w3-padding-64">
+  <img 
+    src="assets/img/logo_tube_amps_fx.png"
+    alt="Tube Amps & FX — Just tube amps, not bullshit"
+    class="w3-image"
+    style="max-width:420px"
+  >
+</div>
+
+
+  <!-- Manifesto -->
+  <div class="w3-container w3-content w3-padding-32" style="max-width:900px">
+    <p class="w3-large">
+      Comunidade maker dedicada a amplificadores valvulados, pedais analógicos
+      e eletrônica aplicada ao áudio.
+    </p>
+
+    <p class="w3-justify">
+      Aqui o foco é circuito, elétrica, timbre e prática de bancada.
+      Menos hype, mais esquemático.
+    </p>
+  </div>
+
+  <!-- Destaques -->
+  
+   <p>
+   D&uacute;vidas? Sugest&otilde;es? Entre em CONTATO com a gente no nosso Grupo do
+Whatsapp:
+  </p>
+  <p>
+   <img alt="whats.jpg" data-query="?direct&amp;400" src="assets/img/whats.jpg" width="400"/>
+  </p>
+  <p>
+   Nosso Canal no YouTube:
+  </p>
+  <p>
+   <a href="https://www.youtube.com/@profedneyrossi">
+    YouTube - Tube Amps
+&amp; FX
+   </a>
+  </p>
+
+  <!-- Contato -->
+  <div class="w3-container w3-content w3-padding-64" id="contact" style="max-width:800px">
+    <h2 class="w3-wide w3-center">CONTATO</h2>
+    <p class="w3-opacity w3-center"><i>Comunidade aberta e colaborativa</i></p>
+
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-envelope" style="width:30px"></i> tubeamps @ duck.com<br>
+        <i class="fa fa-github" style="width:30px"></i> GitHub Pages<br>
+      </div>
+
+      <div class="w3-col m6">
+        <p>
+          Este projeto é mantido de forma independente e sem fins comerciais.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Rodapé -->
+<footer class="w3-container w3-padding-32 w3-center w3-opacity w3-dark-grey">
+  <p class="w3-medium">
+    © Tube Amps & FX — Comunidade independente de áudio analógico
+  </p>
+</footer>
+
+<script>
+function toggleMenu() {
+  var x = doc
