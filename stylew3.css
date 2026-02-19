@@ -1,3 +1,7 @@
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
 /* W3.CSS 5.02 March 31 2025 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */

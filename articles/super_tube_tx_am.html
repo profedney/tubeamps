@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Tube Amps & FX</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- W3.CSS local -->
+  <link rel="stylesheet" href="../stylew3.css">
+
+  <!-- Fonte -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+  <!-- Font Awesome (CDN) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="w3-black">
+
+<!-- ===================== NAVBAR ===================== -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+       href="javascript:void(0)"
+       onclick="toggleMenu()"
+       title="Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <a href="../index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="../about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="../articles/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ARTIGOS</a>
+    <a href="../contato.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTATO</a>
+
+  </div>
+</div>
+
+<!-- ===================== MENU MOBILE ===================== -->
+<div id="navMobile"
+     class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+     style="margin-top:46px">
+
+  <a href="../about.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">ABOUT</a>
+  <a href="../articles/" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">ARTIGOS</a>
+  <a href="../contato.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">CONTATO</a>
+
+</div>
+
+<!-- ===================== CABEÇARIO ===================== -->
+<div class="w3-content" style="max-width:1200px;margin-top:64px">
+
+  <!-- Hero / Logo -->
+  <div class="w3-container w3-center w3-padding-64">
+    <img
+      src="../logo_tube_amps_fx.png"
+      alt="Tube Amps & FX — Just tube amps, not bullshit"
+      class="w3-image"
+      style="width:100%; max-width:480px;">
+  </div>
+
+<!-- ===================== CONTEUDO ===================== -->
+
+
+<h1>Super Transmissor Valvulado AM</h1>
+
+<p>
+Este transmissor faz parte de nossa história pessoal. Alguns de nossos amigos de escola eram verdadeiros aficionados por eletrônica. Entre eles, Edney e Henry Ranieri. Ranieri era o mestre das válvulas: foi ele quem montou este transmissor lá nos anos 1980, quando ainda estávamos no ensino fundamental.
+</p>
+
+<p>
+Essas experiências marcaram profundamente nossa formação técnica e humana. O contato com válvulas, rádios antigos, sucata eletrônica e experimentação prática despertou em muitos de nós uma curiosidade científica que se transformaria, mais tarde, em profissão, vocação e paixão permanente pela eletrônica.
+</p>
+
+<p>
+Segue, portanto, este artigo, apresentado com o máximo cuidado para manter sua originalidade, em respeito ao grande Newton C. Braga, que foi nosso mestre através das páginas dessas maravilhosas revistas de eletrônica. Foram elas que, geração após geração, ensinaram não apenas circuitos, mas também o valor do aprendizado prático, da curiosidade técnica e do conhecimento compartilhado.
+</p>
+
+<p>
+Este texto é, ao mesmo tempo, um registro técnico, um documento histórico e uma homenagem.
+</p>
+
+<h1>SUPER TRANSMISSOR</h1>
+
+<p>(com material de sucata)</p>
+
+<p>Este poderoso transmissor de AM é uma versão “velha-guarda”, que utiliza válvulas e outros componentes totalmente aproveitados da sucata. Velhos rádios, amplificadores ou mesmo outros aparelhos podem ser “convertidos” facilmente neste transmissor experimental de excelente qualidade e desempenho.</p>
+
+<p>O uso de válvulas num projeto pode parecer estranho aos leitores, mas devemos lembrar que, mesmo que elas tenham sido quase totalmente substituídas na atualidade pelos transistores e outros dispositivos de estado sólido, existem algumas aplicações em que seu desempenho ainda é superior.
+Este é o caso de transmissores, principalmente para a faixa de ondas curtas e médias, onde se exige uma potência um pouco maior do que a obtida por um simples transistor, para se ter um alcance razoável.</p>
+
+<p>É claro que existem limitações legais para a operação de tais equipamentos, mas delas falaremos no final do artigo, pois nem sempre a montagem de um transmissor é feita somente para se transmitir, conforme explicaremos também.</p>
+
+<p>O transmissor proposto neste artigo é de um tipo que esteve em moda há aproximadamente 20 anos, tendo sido muito popular na ocasião, fazendo o mesmo que hoje fazem os miniaturizados microtransmissores de FM. O próprio autor montou, no início de sua carreira, diversas versões, tendo escolhido uma delas para os leitores que estão “loucos” para aproveitar material antigo.
+</p>
+
+<figure>
+  <figcaption>Capa revista – Super Transmissor</figcaption>
+  <a href="tube/img/tube_tx_am_capa.jpg">
+  <img class="responsive" src="tube/img/thumb/tube_tx_am_capa.jpg" alt="capa"></a>
+</figure>
+
+
+
+<h2>Como Funciona</h2>
+
+<p>Na transmissão de sinais de rádio, o alcance depende, além da potência, da frequência de operação. Um sinal de pequena intensidade na faixa de FM chega muito mais longe que um da mesma intensidade na faixa de AM. Isso porque, enquanto tipicamente a frequência na faixa de FM é de 100.000.000 Hz, na faixa de AM operamos em torno de 1.000.000 Hz.</p>
+
+<p>Se quisermos montar um transmissor de AM com alcance razoável, para poder operar dentro do âmbito domiciliar, por exemplo, com algumas dezenas de metros de alcance, precisamos de muito mais potência do que para a mesma versão em FM.
+</p>
+
+<p>A potência exigida para o caso do AM não pode normalmente ser conseguida com circuitos simples usando transistores, daí praticamente não existirem projetos de microtransmissores de AM.</p>
+
+<p>Podemos, entretanto, fazer um excelente transmissor para a faixa de AM utilizando válvulas, pois elas podem fornecer uma potência muito maior. Tipos como a 6AQ5 e a 6L6 podem facilmente fornecer alguns watts de potência, contra os milésimos de watt de um transistor.</p>
+
+<p>O circuito que descrevemos aproveita as válvulas pentodo usadas nas saídas de rádios e amplificadores antigos, como as 6AQ5, 6L6, 6V6 etc., que podem ser encontradas em boas condições em muitas sucatas.</p>
+
+<p>Alimentamos essas válvulas com a alta tensão de um transformador obtido do próprio rádio ou aparelho velho, e conseguimos transmitir alguns watts de potência na faixa de ondas médias, para o âmbito domiciliar ou para algumas experiências e demonstrações bastante interessantes.</p>
+
+<p>Outras peças do aparelho de sucata podem ser aproveitadas, como o capacitor variável, o capacitor de filtro e o próprio chassi (figura 1).</p>
+
+
+<figure>
+  <figcaption>Figura 1 – Chassis e Componentes aproveitados da sucata</figcaption>
+  <a href="tube/img/tube_tx_am1.jpg">
+  <img class="responsive" src="tube/img/thumb/tube_tx_am1.jpg" alt="Figura 1"></a>
+</figure>
+
+<p>
+Até mesmo o transformador de saída e o alto-falante terão função, se puderem ser aproveitados: eles permitem a realização do microfone.
+</p>
+
+<p>
+As explicações que daremos permitem aproveitar materiais de diversos tipos de rádios ou amplificadores antigos, mas recomendamos, em especial, que o leitor procure um que tenha as seguintes características:
+</p>
+
+<ul>
+  <li>Use válvulas 6AQ5, 6V6 ou 6L6 na saída (verifique a marcação no vidro);</li>
+  <li>Tenha transformador de força (preferivelmente que não seja autotransformador);</li>
+  <li>Tenha capacitor variável de duas seções em boas condições (verifique se as placas não estão amassadas).</li>
+</ul>
+
+<h2>Montagem</h2>
+
+<p>
+O circuito do transmissor é dado em duas versões básicas, que utilizam transformador comum ou autotransformador (figura 2).
+</p>
+
+
+<figure>
+  <figcaption>Figura 2 – Diagrama do circuito do transmissor</figcaption>
+  <a href="tube/img/tube_tx_am2.jpg">
+  <img class="responsive" src="tube/img/thumb/tube_tx_am2.jpg" alt="Figura 2"></a>
+</figure>
+
+<p>
+Assim, a primeira coisa que o leitor deve fazer é escolher a versão em função do transformador que tiver aproveitado de seu aparelho.
+</p>
+
+<p>
+Esses componentes são diferenciados da seguinte forma: o transformador comum tem um ponto de 0 V para a alimentação e outro de 0 V para a tomada central do secundário. O autotransformador possui apenas um ponto de 0 V comum aos dois enrolamentos (figura 3).
+</p>
+
+
+<figure>
+  <figcaption>Figura 3 – Diferença entre transformador comum e autotransformador</figcaption>
+  <a href="tube/img/tube_tx_am3.jpg">
+  <img class="responsive" src="tube/img/thumb/tube_tx_am3.jpg" alt="Figura 3"></a>
+</figure>
+
+Daremos a montagem para o primeiro tipo, mas com a indicação do que deve ser feito no caso do outro: basta eliminar as ligações indicadas conforme o esquema.
+
+Para a válvula, damos o circuito em função da 6AQ5, mas no desenho da disposição dos pinos apresentamos as opções para as outras válvulas. Veja que a contagem dos pinos de uma válvula é feita por baixo, no sentido dos ponteiros do relógio, a partir da marca ou do espaço.
+
+Para os leitores que não quiserem aproveitar o chassi do próprio rádio ou aparelho de onde as peças forem retiradas, damos como sugestão uma caixa de madeira ou mesmo de alumínio, em que deve ser feita a furação para o transformador, suporte da válvula, C1/C2, bobina e fixação do variável (na parte superior), e na parte frontal para o interruptor S1, a lâmpada piloto e o jaque do microfone J1.
+
+O desenho do chassi com as peças é mostrado na figura 4.
+
+<figure>
+  <figcaption>Figura 4 – Chassis layout</figcaption>
+  <a href="tube/img/tube_tx_am4.jpg">
+  <img class="responsive" src="tube/img/thumb/tube_tx_am4.jpg" alt="Figura 4"></a>
+</figure>
+
+<p>Observe a ligação do primário conforme a sua rede: se for de 110 V ou 220 V, você deve fazer uma ou outra ligação.</p>
+
+<p>No desenho temos dois pontos de 0 V. O da tomada central do secundário de alta tensão (A e A) é ligado ao chassi por meio do terminal da ponte que é parafusado, servindo de terra.
+Se você usar um autotransformador, o terminal de 0 V da entrada da tomada é que deve ser ligado ao chassi, em qualquer ponto.</p>
+
+<p>Nesse caso teremos uma configuração tradicional denominada “rabo-quente”, isto é, em que a rede tem conexão com o chassi.</p>
+
+<p>Isso significa que, em hipótese alguma, deveremos encostar no chassi se for usado autotransformador, pois ele dará choque. O chassi de madeira, com apenas a tampa metálica onde são ligados os componentes, é o ideal. Enfim, lembre-se:</p>
+<ul>
+    <li>Se você usar autotransformador, o chassi é “vivo” e pode dar choque se você encostar nele. Monte o aparelho posteriormente numa caixa de madeira fechada para evitar problemas;</li>
+    <li>Se você usar transformador com dois pontos de 0 V, um para o primário e outro para a alta tensão, não haverá perigo de choque no chassi.</li>
+</ul>
+
+
+
+<h2>Bobina e Componentes</h2>
+
+ <figure>
+  <figcaption>Figura 5 – Detalhes da bobina e capacitor de filtro</figcaption>
+  <a href="tube/img/tube_tx_am5.jpg">
+  <img class="responsive" src="tube/img/thumb/tube_tx_am5.jpg" alt="Figura 5"></a>
+</figure>
+
+<p>A bobina é formada por 50 + 50 voltas de fio esmaltado 26 ou 28, enroladas num cabo de vassoura ou num pedaço de tubo de PVC de 1 polegada, ou aproximadamente isso (2 a 2,5 cm).</p>
+
+<p>Enrole 50 voltas de fio e faça uma tomada (laço), e depois enrole mais 50 voltas em continuação, isto é, no mesmo sentido. Fixe a bobina no chassi por meio de um “L” de alumínio. Um “L” eficiente para isso é o prendedor usado no final dos trilhos de cortinas.</p>
+
+<p>O capacitor deve obrigatoriamente ser de alta tensão, para 300 volts ou mais. Sua capacitância deve ser de 4, 8 ou 16 µF por seção.</p>
+
+<p>Na figura 6 damos a pinagem dos diversos tipos de válvulas que podem ser usadas. Seus soquetes são parafusados no chassi.</p>
+
+<figure>
+  <figcaption>Figura 6 – Pinagem das válvulas</figcaption>
+  <a href="tube/img/tube_tx_am6.jpg">
+  <img class="responsive" src="tube/img/thumb/tube_tx_am6.jpg" alt="Figura 6"></a>
+</figure>
+
+<p>A lâmpada piloto é opcional, mas certamente dará melhor aparência ao transmissor. Use uma de 6 V comum.</p>
+
+<p>O próprio interruptor geral S1 pode ser aproveitado de um velho rádio. Trata-se de um potenciômetro com chave, tendo sido ligada apenas a chave.</p>
+
+<p>O jaque de entrada é do tipo RCA. No desenho temos a ligação de C4 e R3 somente, porque o fio terra não é necessário no caso de um chassi metálico. Se seu chassi não tiver esta parte metálica, do ponto em que R3 está ligado no jaque até o 0 V (tomada central do secundário de alta tensão) deve ser ligado um fio.</p>
+
+<p>A antena deve ser um pedaço de fio comum, de no máximo 1,5 metro de comprimento. Não use maior.
+O capacitor C5 deve ser de alta tensão, em vista de sua função. Use um capacitor para 1 kV ou mais.</p>
+
+<p>Na figura 7 damos os possíveis microfones que podem ser empregados.</p>
+
+<figure>
+  <figcaption>Figura 7 – Tipos de microfones</figcaption>
+  <a href="tube/img/tube_tx_am7.jpg">
+  <img class="responsive" src="tube/img/thumb/tube_tx_am7.jpg" alt="Figura 7"></a>
+</figure>
+
+<p>Os melhores resultados são conseguidos com um microfone de cristal, mas um alto-falante e um transformador de saída também resultam num microfone de razoável desempenho.</p>
+
+<h2>Colocando em Funcionamento</h2>
+
+<p>Confira toda a montagem com cuidado e não toque em nada depois de ligar o aparelho. Existem pontos em que a tensão supera facilmente os 200 volts e, nos locais em que existe RF (radiofrequência), você pode até se queimar.</p>
+
+<p>Ligando o aparelho na tomada e acionando S1, duas coisas devem acontecer de imediato: a lâmpada piloto e a válvula devem acender. A válvula demora alguns segundos para aquecer.</p>
+
+<p>Ligue nas proximidades (uns 2 ou 3 metros de distância) um rádio sintonizado na faixa de ondas médias (AM), entre 600 e 1000 kHz. Procure um ponto em que não existam estações operando. A antena deve estar esticada.</p>
+
+<p>Gire, então, vagarosamente o capacitor variável do transmissor até ouvir o sinal que ele emite. Vá batendo no microfone ao mesmo tempo para identificar o sinal de maior potência. Diversos sinais podem ser captados, correspondentes a harmônicas, mas o leitor deve procurar o de maior intensidade. Depois é só usar seu transmissor.</p>
+
+<p>Se nenhum sinal for captado, encoste uma lâmpada neon no terminal da bobina que vai ao variável. Ela deve brilhar intensamente se o circuito estiver oscilando. Se não estiver, desligue e confira a montagem.</p>
+
+<h2>Experiências e Usos</h2>
+
+<p>Para usar como transmissor propriamente dito, basta falar ao microfone e sempre operar em local de frequência livre.</p>
+
+<p>Lembramos que existem restrições legais quanto à operação fora do âmbito domiciliar. Por isso:</p>
+
+<p><strong>NUNCA USE ANTENA MAIOR DO QUE A INDICADA E NEM AJUSTE O APARELHO PARA OPERAR EM FREQUÊNCIA DE ESTAÇÃO LOCAL.</strong></p>
+
+<p>As experiências que podem ser feitas com o transmissor referem-se ao poder das ondas de rádio.</p>
+
+<h3>Experiência 1</h3>
+
+<p>Encoste uma lâmpada fluorescente (um dos pinos) no terminal do variável que vai à bobina, ou mesmo na ponta da antena, que deve estar enrolada (figura 8).</p>
+
+<figure>
+  <figcaption>Figura 8 – Lâmpada fluorescente excitada por RF</figcaption>
+  <a href="tube/img/tube_tx_am8.jpg">
+  <img class="responsive" src="tube/img/thumb/tube_tx_am8.jpg" alt="Figura 8"></a>
+</figure>
+<p>A lâmpada vai brilhar simplesmente com a energia de RF. Pequenas ondulações escuras serão vistas propagando-se no interior da lâmpada, as quais correspondem a posições de nós de ondas estacionárias que se formam no gás ionizado.</p>
+
+
+<h3>Experiência 2</h3>
+
+<p>Acendimento de uma lâmpada piloto por anel de indução.</p>
+<p>Basta enrolar com fio comum uma bobina de 3 a 5 voltas e ligá-la a uma lâmpada piloto. Colocando esta lâmpada nas proximidades da bobina, ela acenderá com os sinais de rádio emitidos (figura 9).</p>
+
+<figure>
+  <figcaption>Figura 9 – Acendimento por indução</figcaption>
+  <a href="tube/img/tube_tx_am9.jpg">
+  <img class="responsive" src="tube/img/thumb/tube_tx_am9.jpg" alt="Figura 9"></a>
+</figure>
+
+
+<h3>Experiência 3</h3>
+
+<p>Finalmente, segurando uma lâmpada neon pelo bulbo e aproximando-a ou encostando seu terminal na antena, ela deve acender com os sinais de alta frequência.</p>
+
+<p>Importante: na versão com autotransformador, o microfone deve ser isolado, pois sua malha fica conectada à rede, podendo causar choques perigosos.</p>
+
+<h2>Lista de Material</h2>
+
+<ul>
+  <li>T1 – Transformador de força</li>
+  <li>V1 – 6AQ5, 6V6, 6L6 ou equivalente</li>
+  <li>D1, D2 – 1N4007 ou BY127</li>
+  <li>C1/C2 – 8 µF × 350 V</li>
+  <li>C3 – 10 µF × 35 V</li>
+  <li>C4 – 100 nF</li>
+  <li>C5 – 100 pF × 1 kV</li>
+  <li>R1 – 1k5 × 5 W</li>
+  <li>R2 – 330 Ω × 1/2 W</li>
+  <li>R3 – 470 kΩ × 1/8 W</li>
+  <li>CV – Capacitor variável de duas seções</li>
+  <li>S1 – Interruptor simples</li>
+  <li>Diversos – acessórios e componentes mecânicos</li>
+</ul>
+
+<h2>Referência bibliográfica</h2>
+
+<p>
+BRAGA, Newton C. <em>Experiências e brincadeiras com eletrônica</em>. Edição nº 9. São Paulo: Editora Saber, c. 1985.
+</p>
+
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="w3-container w3-padding-32 w3-center w3-opacity w3-dark-grey">
+  <p class="w3-medium">
+    © Tube Amps & FX — Comunidade independente de áudio analógico
+  </p>
+</footer>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script src="../script.js"></script>
+
+</body>
+</html>
