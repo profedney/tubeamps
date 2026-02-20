@@ -18,8 +18,7 @@ THUMB_SIZE = (300, 300)
 TEMPLATE_FILE = "template.html"
 OUTPUT_HTML = "index.html"
 
-SUPPORTED_IMAGES = (".jpg", ".jpeg", ".png", ".webp", ".bmp")
-
+SUPPORTED_IMAGES = (".jpg", ".gif", ".jpeg", ".jfif", ".png", ".webp", ".bmp")
 
 # =========================
 # Utilidades
@@ -37,23 +36,37 @@ def generate_img_thumb(src, dst):
 
 
 def generate_pdf_thumb(pdf_path, thumb_path):
-    doc = fitz.open(pdf_path)
-    page = doc.load_page(0)
+    """
+    Gera thumbnail do PDF.
+    Retorna (True, None) em caso de sucesso
+    Retorna (False, mensagem_de_erro) em caso de falha
+    """
+    try:
+        doc = fitz.open(pdf_path)
 
-    zoom = 2.0
-    mat = fitz.Matrix(zoom, zoom)
-    pix = page.get_pixmap(matrix=mat)
+        if doc.page_count == 0:
+            raise RuntimeError("PDF sem páginas")
 
-    img = Image.frombytes(
-        "RGB",
-        (pix.width, pix.height),
-        pix.samples
-    )
+        page = doc.load_page(0)
 
-    img.thumbnail(THUMB_SIZE)
-    img.save(thumb_path, "JPEG")
+        zoom = 2.0
+        mat = fitz.Matrix(zoom, zoom)
+        pix = page.get_pixmap(matrix=mat)
 
-    doc.close()
+        img = Image.frombytes(
+            "RGB",
+            (pix.width, pix.height),
+            pix.samples
+        )
+
+        img.thumbnail(THUMB_SIZE)
+        img.save(thumb_path, "JPEG")
+
+        doc.close()
+        return True, None
+
+    except Exception as e:
+        return False, str(e)
 
 
 # =========================
@@ -62,29 +75,41 @@ def generate_pdf_thumb(pdf_path, thumb_path):
 
 def collect_items():
     items = []
+    errors = []
 
+    # ---------------------
     # Imagens
+    # ---------------------
     for file in sorted(IMG_DIR.iterdir()):
         if file.suffix.lower() in SUPPORTED_IMAGES:
             thumb = IMG_THUMB_DIR / (file.stem + ".jpg")
 
-            if not thumb.exists():
-                generate_img_thumb(file, thumb)
+            try:
+                if not thumb.exists():
+                    generate_img_thumb(file, thumb)
 
-            items.append({
-                "type": "image",
-                "src": file.as_posix(),
-                "thumb": thumb.as_posix(),
-                "name": file.name
-            })
+                items.append({
+                    "type": "image",
+                    "src": file.as_posix(),
+                    "thumb": thumb.as_posix(),
+                    "name": file.name
+                })
 
+            except Exception as e:
+                errors.append((file.as_posix(), str(e)))
+
+    # ---------------------
     # PDFs
+    # ---------------------
     for file in sorted(PDF_DIR.iterdir()):
         if file.suffix.lower() == ".pdf":
             thumb = PDF_THUMB_DIR / (file.stem + ".jpg")
 
             if not thumb.exists():
-                generate_pdf_thumb(file, thumb)
+                ok, err = generate_pdf_thumb(file, thumb)
+                if not ok:
+                    errors.append((file.as_posix(), err))
+                    continue  # ignora este PDF
 
             items.append({
                 "type": "pdf",
@@ -93,8 +118,7 @@ def collect_items():
                 "name": file.name
             })
 
-    return items
-
+    return items, errors
 
 # =========================
 # HTML Rendering
@@ -125,17 +149,23 @@ def generate_html(items):
     with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
         f.write(final_html)
 
-
 # =========================
 # Main
 # =========================
 
 def main():
     ensure_dirs()
-    items = collect_items()
+
+    items, errors = collect_items()
     generate_html(items)
+
     print("✔ Galeria gerada com sucesso.")
 
+    if errors:
+        print("\n⚠ Arquivos que não puderam ser processados:")
+        for path, err in errors:
+            print(f" - {path}")
+            print(f"   Motivo: {err}")
 
 if __name__ == "__main__":
     main()
