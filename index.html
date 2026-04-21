@@ -1,188 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <title>Tube Amps & FX</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Tube Amps & FX | Amplificadores Valvulados e Pedais Analógicos</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Comunidade maker dedicada a amplificadores valvulados, pedais analógicos e eletrônica de áudio. Projetos, esquemas e prática real.">
-  <meta name="keywords" content="amplificadores valvulados, pedais analógicos, tube amps, DIY áudio, eletrônica áudio">
-  <meta name="author" content="Tube Amps & FX">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Tube Amps & FX">
-  <meta property="og:description" content="Menos hype, mais esquemático.">
-  <meta property="og:image" content="https://tubeamps.com.br/logo_tube_amps_fx.png">
-  <meta property="og:type" content="website">
-
-  <link rel="icon" href="favicon.ico">
-
-  <!-- CSS -->
+  <!-- W3.CSS local -->
   <link rel="stylesheet" href="stylew3.css">
 
-  <!-- Fonte otimizada -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <!-- Fonte -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+  <!-- Font Awesome (CDN) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
-    body { font-family: "Lato", sans-serif; }
-
-    .hero img { max-width: 480px; width: 100%; }
-
-    .cta-btn {
-      display: inline-block;
-      padding: 12px 24px;
-      margin-top: 16px;
-      background: #444;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
+    body {
+      font-family: "Lato", sans-serif;
     }
-
-    .cta-btn:hover { background: #666; }
   </style>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Tube Amps & FX",
-    "url": "https://tubeamps.com.br",
-    "description": "Comunidade de amplificadores valvulados e pedais analógicos"
-  }
-  </script>
 </head>
 
 <body class="w3-black">
 
-<header class="w3-top">
-  <nav class="w3-bar w3-black w3-card" aria-label="Menu principal">
+<!-- ===================== NAVBAR ===================== -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
 
-    <button class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right"
-            onclick="toggleMenu()" aria-label="Abrir menu">
-      ☰
-    </button>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+       href="javascript:void(0)"
+       onclick="toggleMenu()"
+       title="Menu">
+      <i class="fa fa-bars"></i>
+    </a>
 
-    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <a href="about.html" class="w3-bar-item w3-button w3-hide-small">ABOUT</a>
-    <a href="articles/" class="w3-bar-item w3-button w3-hide-small">ARTIGOS</a>
-    <a href="contato.html" class="w3-bar-item w3-button w3-hide-small">CONTATO</a>
-  </nav>
-</header>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="articles/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ARTIGOS</a>
+    <a href="contato.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTATO</a>
 
-<nav id="navMobile" class="w3-bar-block w3-black w3-hide w3-top" style="margin-top:46px">
-  <a href="about.html" class="w3-bar-item w3-button" onclick="toggleMenu()">ABOUT</a>
-  <a href="articles/" class="w3-bar-item w3-button" onclick="toggleMenu()">ARTIGOS</a>
-  <a href="contato.html" class="w3-bar-item w3-button" onclick="toggleMenu()">CONTATO</a>
-</nav>
+  </div>
+</div>
 
-<main class="w3-content" style="max-width:1200px;margin-top:64px" role="main">
+<!-- ===================== MENU MOBILE ===================== -->
+<div id="navMobile"
+     class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
+     style="margin-top:46px">
 
-  <!-- HERO -->
-  <section class="w3-container w3-center w3-padding-64 hero">
-    <h1>Tube Amps & FX</h1>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">ABOUT</a>
+  <a href="articles/" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">ARTIGOS</a>
+  <a href="contato.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">CONTATO</a>
 
-    <img src="logo_tube_amps_fx.webp"
-         alt="Logo da comunidade Tube Amps & FX"
-         width="480" height="480" loading="eager">
+</div>
 
-    <p class="w3-large">Comunidade maker de áudio analógico</p>
+<!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+<div class="w3-content" style="max-width:1200px;margin-top:64px">
 
-    <a href="articles/" class="cta-btn">Explorar artigos</a>
-  </section>
+  <!-- Hero / Logo -->
+  <div class="w3-container w3-center w3-padding-64">
+    <img
+      src="logo_tube_amps_fx.png"
+      alt="Tube Amps & FX — Just tube amps, not bullshit"
+      class="w3-image"
+      style="width:100%; max-width:480px;">
+  </div>
 
-  <!-- SLIDES -->
-  <section aria-label="Galeria de projetos" class="w3-content">
+  <!-- ===================== SLIDESHOW ===================== -->
+<div class="w3-content w3-display-container" style="max-width:1200px">
 
-    <div class="mySlides">
-      <img src="/images/slide1.webp" alt="Amplificador valvulado artesanal" width="1200" height="600" loading="lazy">
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/images/slide1.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/images/slide2.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/images/slide3.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/images/slide4.jpeg" style="width:100%">
+  </div>
+
+</div>
+
+
+  <!-- Manifesto -->
+  <div class="w3-container w3-padding-32" style="max-width:900px;margin:auto">
+    <p class="w3-large">
+      Comunidade maker dedicada a amplificadores valvulados, pedais analógicos
+      e eletrônica aplicada ao áudio.
+    </p>
+
+    <p class="w3-justify">
+      Aqui o foco é circuito, elétrica, timbre e prática de bancada.
+      Menos hype, mais esquemático.
+    </p>
+  </div>
+
+  <!-- Destaques -->
+  <div class="w3-row-padding w3-padding-32">
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-container w3-dark-grey w3-padding">
+        <h3>Amplificadores Valvulados</h3>
+        <p>Projetos, análise de circuitos, manutenção e modificações.</p>
+      </div>
     </div>
 
-    <div class="mySlides">
-      <img src="/images/slide2.webp" alt="Montagem de pedal analógico" width="1200" height="600" loading="lazy">
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-container w3-dark-grey w3-padding">
+        <h3>Pedais Analógicos</h3>
+        <p>Overdrives, fuzzes, boosters e efeitos artesanais.</p>
+      </div>
     </div>
 
-    <div class="mySlides">
-      <img src="/images/slide3.webp" alt="Circuito eletrônico de áudio" width="1200" height="600" loading="lazy">
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-container w3-dark-grey w3-padding">
+        <h3>Cultura DIY</h3>
+        <p>Conhecimento aberto, prática real e aprendizado coletivo.</p>
+      </div>
     </div>
 
-  </section>
+  </div>
 
-  <!-- MANIFESTO -->
-  <section class="w3-container w3-padding-32" style="max-width:900px;margin:auto">
-    <h2>Sobre a comunidade</h2>
+  <!-- Rodape 1 -->
+  <div class="w3-container w3-padding-64" id="contact" style="max-width:800px;margin:auto">
+   
 
-    <p>
-      Comunidade dedicada ao estudo e construção de amplificadores valvulados,
-      pedais analógicos e eletrônica aplicada ao áudio.
-    </p>
+    <div class="w3-row w3-padding-32">
 
-    <p>
-      O foco é engenharia de circuito, análise técnica e prática de bancada.
-      Menos marketing, mais eletrônica real.
-    </p>
-  </section>
-
-  <!-- CONTEÚDO SEO -->
-  <section class="w3-container w3-padding-32" style="max-width:900px;margin:auto">
-    <h2>Amplificadores valvulados</h2>
-    <p>
-      Amplificadores valvulados utilizam válvulas termiônicas para amplificação de sinal.
-      São valorizados pela resposta dinâmica, saturação harmônica e comportamento não linear.
-    </p>
-
-    <h2>Pedais analógicos</h2>
-    <p>
-      Pedais analógicos baseiam-se em circuitos discretos e operacionais, produzindo efeitos como
-      overdrive, fuzz e boost com características sonoras específicas.
-    </p>
-  </section>
-
-  <!-- DESTAQUES -->
-  <section class="w3-row-padding w3-padding-32">
-
-    <article class="w3-third">
-      <div class="w3-container w3-dark-grey w3-padding">
-        <h3>Amplificadores</h3>
-        <p>Projetos, manutenção e análise de circuitos clássicos.</p>
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-github" style="width:30px"></i>
+        GitHub Pages<br>
       </div>
-    </article>
 
-    <article class="w3-third">
-      <div class="w3-container w3-dark-grey w3-padding">
-        <h3>Pedais</h3>
-        <p>Construção e modificação de efeitos analógicos.</p>
+      <div class="w3-col m6">
+        <p>
+          Este projeto é mantido de forma independente e sem fins comerciais.
+        </p>
       </div>
-    </article>
 
-    <article class="w3-third">
-      <div class="w3-container w3-dark-grey w3-padding">
-        <h3>DIY</h3>
-        <p>Aprendizado prático e conhecimento aberto.</p>
-      </div>
-    </article>
+    </div>
+  </div>
 
-  </section>
+</div>
+<!-- /w3-content -->
 
-  <!-- CONTATO / RODAPÉ -->
-  <section class="w3-container w3-padding-64" style="max-width:800px;margin:auto">
-    <h2>Projeto</h2>
-
-    <p>
-      Projeto independente, sem fins comerciais, focado em conhecimento aberto.
-    </p>
-  </section>
-
-</main>
-
+<!-- ===================== RODAPÉ 2 ===================== -->
 <footer class="w3-container w3-padding-32 w3-center w3-opacity w3-dark-grey">
-  <p>© Tube Amps & FX</p>
+  <p class="w3-medium">
+    © Tube Amps & FX — Comunidade independente de áudio analógico
+  </p>
 </footer>
 
+<!-- ===================== SCRIPTS ===================== -->
 <script src="script.js"></script>
 
 </body>
