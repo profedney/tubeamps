@@ -59,47 +59,41 @@
 
 <body class="w3-black">
 
-<!-- ===================== NAVBAR ===================== -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
+<header class="w3-top">
+  <nav class="w3-bar w3-black w3-card" aria-label="Menu principal">
 
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
-       href="javascript:void(0)"
-       onclick="toggleMenu()"
-       title="Menu">
-      <i class="fa fa-bars"></i>
-    </a>
+    <button class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right"
+            onclick="toggleMenu()" aria-label="Abrir menu">
+      ☰
+    </button>
 
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-    <a href="articles/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ARTIGOS</a>
-    <a href="contato.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTATO</a>
+    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small">ABOUT</a>
+    <a href="articles/" class="w3-bar-item w3-button w3-hide-small">ARTIGOS</a>
+    <a href="contato.html" class="w3-bar-item w3-button w3-hide-small">CONTATO</a>
+  </nav>
+</header>
 
-  </div>
-</div>
+<nav id="navMobile" class="w3-bar-block w3-black w3-hide w3-top" style="margin-top:46px">
+  <a href="about.html" class="w3-bar-item w3-button" onclick="toggleMenu()">ABOUT</a>
+  <a href="articles/" class="w3-bar-item w3-button" onclick="toggleMenu()">ARTIGOS</a>
+  <a href="contato.html" class="w3-bar-item w3-button" onclick="toggleMenu()">CONTATO</a>
+</nav>
 
-<!-- ===================== MENU MOBILE ===================== -->
-<div id="navMobile"
-     class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top"
-     style="margin-top:46px">
+<main class="w3-content" style="max-width:1200px;margin-top:64px" role="main">
 
-  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">ABOUT</a>
-  <a href="articles/" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">ARTIGOS</a>
-  <a href="contato.html" class="w3-bar-item w3-button w3-padding-large" onclick="toggleMenu()">CONTATO</a>
+  <!-- HERO -->
+  <section class="w3-container w3-center w3-padding-64 hero">
+    <h1>Tube Amps & FX</h1>
 
-</div>
+    <img src="logo_tube_amps_fx.webp"
+         alt="Logo da comunidade Tube Amps & FX"
+         width="480" height="480" loading="eager">
 
-<!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
-<div class="w3-content" style="max-width:1200px;margin-top:64px">
+    <p class="w3-large">Comunidade maker de áudio analógico</p>
 
-  <!-- Hero / Logo -->
-  <div class="w3-container w3-center w3-padding-64">
-    <img
-      src="logo_tube_amps_fx.png"
-      alt="Tube Amps & FX — Just tube amps, not bullshit"
-      class="w3-image"
-      style="width:100%; max-width:480px;">
-  </div>
+    <a href="articles/" class="cta-btn">Explorar artigos</a>
+  </section>
 
   <!-- ===================== SLIDESHOW ===================== -->
 <div class="w3-content w3-display-container" style="max-width:1200px">
