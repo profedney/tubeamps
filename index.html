@@ -4,241 +4,146 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Tube Amps & FX | Amplificadores Valvulados e Pedais Analógicos</title>
+<title>Tube Amps & FX</title>
 
-<meta name="description" content="Comunidade maker dedicada a amplificadores valvulados, pedais analógicos e eletrônica de áudio.">
-<meta name="author" content="Tube Amps & FX">
-
-<link rel="icon" href="favicon.ico">
-
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
-<!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <style>
-/* ===================== BASE ===================== */
+/* ================= BASE ================= */
 body {
+  margin: 0;
   font-family: "Lato", sans-serif;
-}
-
-/* HERO */
-.hero img {
-  max-width: 480px;
-  width: 100%;
-}
-
-/* BOTÃO */
-.cta-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  margin-top: 16px;
-  background: #444;
+  background: #000;
   color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
 }
 
-.cta-btn:hover {
-  background: #666;
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  border-bottom: 1px solid #222;
+  z-index: 1000;
 }
 
-/* SLIDES */
-.mySlides {
+/* container */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+/* logo */
+.logo {
+  font-weight: bold;
+}
+
+/* botão hamburger */
+.hamburger {
+  font-size: 22px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+/* ================= MENU ================= */
+
+/* mobile */
+.menu {
   display: none;
+  flex-direction: column;
+  background: #000;
+  border-top: 1px solid #222;
 }
 
-/* ACESSIBILIDADE */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
+.menu a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid #111;
 }
 
-/* RESPONSIVO */
-.responsive {
-  max-width: 100%;
-  height: auto;
+.menu a:hover {
+  background: #111;
 }
 
-/* ===================== W3.CSS (RESUMIDO ESSENCIAL) ===================== */
-/* (mantive apenas partes críticas para reduzir tamanho) */
-
-.w3-black { background:#000; color:#fff; }
-.w3-dark-grey { background:#616161; color:#fff; }
-
-.w3-container { padding:0.01em 16px; }
-.w3-padding-32 { padding-top:32px; padding-bottom:32px; }
-.w3-padding-64 { padding-top:64px; padding-bottom:64px; }
-
-.w3-center { text-align:center; }
-
-.w3-bar { overflow:hidden; }
-.w3-bar-item { padding:8px 16px; float:left; }
-.w3-button { cursor:pointer; border:none; background:none; }
-
-.w3-top { position:fixed; width:100%; top:0; z-index:1; }
-
-.w3-hide { display:none; }
-.w3-show { display:block; }
-
-.w3-content {
-  max-width:1200px;
-  margin:auto;
+/* estado ativo */
+.menu.active {
+  display: flex;
 }
 
-.w3-row-padding > div {
-  padding:0 8px;
+/* ================= DESKTOP ================= */
+@media (min-width: 768px) {
+
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+    display: flex !important;
+    flex-direction: row;
+    border: none;
+  }
+
+  .menu a {
+    border: none;
+  }
 }
 
-.w3-third {
-  float:left;
-  width:33.333%;
+/* ================= MAIN ================= */
+main {
+  margin-top: 70px;
+  padding: 20px;
+  text-align: center;
 }
 
-@media (max-width:600px){
-  .w3-third { width:100%; }
-  .w3-hide-small { display:none; }
+/* ================= HERO ================= */
+.hero img {
+  max-width: 400px;
+  width: 100%;
 }
 </style>
 
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "name": "Tube Amps & FX",
- "url": "https://tubeamps.com.br"
-}
-</script>
-
 </head>
 
-<body class="w3-black">
+<body>
 
 <!-- ================= HEADER ================= -->
-<header class="w3-top">
-  <nav class="w3-bar w3-black">
+<header class="header">
+  <div class="nav">
+    <div class="logo">Tube Amps & FX</div>
 
-    <button class="w3-bar-item w3-button w3-right"
-            onclick="toggleMenu()">☰</button>
+    <button class="hamburger" onclick="toggleMenu()">
+      ☰
+    </button>
 
-    <a href="#" class="w3-bar-item w3-button">HOME</a>
-    <a href="about.html" class="w3-bar-item w3-button w3-hide-small">ABOUT</a>
-    <a href="articles/" class="w3-bar-item w3-button w3-hide-small">ARTIGOS</a>
-    <a href="contato.html" class="w3-bar-item w3-button w3-hide-small">CONTATO</a>
-  </nav>
+    <nav id="menu" class="menu">
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">ARTIGOS</a>
+      <a href="#">CONTATO</a>
+    </nav>
+  </div>
 </header>
 
-<nav id="navMobile" class="w3-hide w3-black" style="margin-top:46px">
-  <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="articles/" class="w3-bar-item w3-button">ARTIGOS</a>
-  <a href="contato.html" class="w3-bar-item w3-button">CONTATO</a>
-</nav>
-
 <!-- ================= MAIN ================= -->
-<main class="w3-content" style="margin-top:64px">
+<main>
 
-<!-- HERO -->
-<section class="w3-container w3-center w3-padding-64 hero">
-  <img src="logo_tube_amps_fx.webp" alt="Logo">
-  <p>Comunidade maker de áudio analógico</p>
-  <a href="articles/" class="cta-btn">Explorar artigos</a>
-</section>
-
-<!-- SLIDES -->
-<section>
-  <div class="w3-content">
-
-    <div class="mySlides">
-      <img src="images/slide1.webp" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <img src="images/slide2.webp" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <img src="images/slide3.webp" style="width:100%">
-    </div>
-
-  </div>
-</section>
-
-<!-- SOBRE -->
-<section class="w3-container w3-padding-32" style="max-width:900px;margin:auto">
-  <h2>Sobre</h2>
-  <p>Comunidade dedicada a amplificadores valvulados e pedais analógicos.</p>
-</section>
-
-<!-- CARDS -->
-<section class="w3-row-padding w3-padding-32">
-
-  <div class="w3-third">
-    <div class="w3-container w3-dark-grey">
-      <h3>Amplificadores</h3>
-      <p>Projetos e análise</p>
-    </div>
-  </div>
-
-  <div class="w3-third">
-    <div class="w3-container w3-dark-grey">
-      <h3>Pedais</h3>
-      <p>Efeitos analógicos</p>
-    </div>
-  </div>
-
-  <div class="w3-third">
-    <div class="w3-container w3-dark-grey">
-      <h3>DIY</h3>
-      <p>Conhecimento aberto</p>
-    </div>
-  </div>
-
-</section>
+  <section class="hero">
+    <img src="logo_tube_amps_fx.webp" alt="logo">
+    <p>Comunidade maker de áudio analógico</p>
+  </section>
 
 </main>
 
-<!-- ================= FOOTER ================= -->
-<footer class="w3-center w3-dark-grey w3-padding-32">
-  © Tube Amps & FX
-</footer>
-
-<!-- ================= JS ================= -->
+<!-- ================= SCRIPT ================= -->
 <script>
-let slideIndex = 0;
-
-document.addEventListener("DOMContentLoaded", () => {
-  showSlides();
-});
-
-function showSlides() {
-  const slides = document.getElementsByClassName("mySlides");
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slideIndex++;
-  if (slideIndex > slides.length) slideIndex = 1;
-
-  slides[slideIndex - 1].style.display = "block";
-
-  setTimeout(showSlides, 4000);
-}
-
 function toggleMenu() {
-  const nav = document.getElementById("navMobile");
-
-  if (nav.className.indexOf("w3-show") === -1) {
-    nav.className += " w3-show";
-  } else {
-    nav.className = nav.className.replace(" w3-show", "");
-  }
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
 }
 </script>
 
