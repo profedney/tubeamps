@@ -4,108 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Tube Amps & FX</title>
+<title>Tube Amps & FX | Amplificadores Valvulados e Pedais Analógicos</title>
 
+<!-- SEO -->
+<meta name="description" content="Comunidade maker dedicada a amplificadores valvulados, pedais analógicos e eletrônica de áudio. Projetos, esquemas e prática real.">
+<meta name="author" content="Tube Amps & FX">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Tube Amps & FX">
+<meta property="og:description" content="Menos hype, mais esquemático.">
+<meta property="og:image" content="https://tubeamps.com.br/logo_tube_amps_fx.png">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="favicon.ico">
+
+<!-- Fonte -->
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
-<style>
-/* ================= BASE ================= */
-body {
-  margin: 0;
-  font-family: "Lato", sans-serif;
-  background: #000;
-  color: #fff;
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Tube Amps & FX",
+ "url": "https://tubeamps.com.br",
+ "description": "Comunidade de amplificadores valvulados e pedais analógicos"
 }
-
-/* ================= HEADER ================= */
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #000;
-  border-bottom: 1px solid #222;
-  z-index: 1000;
-}
-
-/* container */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px;
-}
-
-/* logo */
-.logo {
-  font-weight: bold;
-}
-
-/* botão hamburger */
-.hamburger {
-  font-size: 22px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  color: #fff;
-}
-
-/* ================= MENU ================= */
-
-/* mobile */
-.menu {
-  display: none;
-  flex-direction: column;
-  background: #000;
-  border-top: 1px solid #222;
-}
-
-.menu a {
-  padding: 12px 16px;
-  text-decoration: none;
-  color: #fff;
-  border-bottom: 1px solid #111;
-}
-
-.menu a:hover {
-  background: #111;
-}
-
-/* estado ativo */
-.menu.active {
-  display: flex;
-}
-
-/* ================= DESKTOP ================= */
-@media (min-width: 768px) {
-
-  .hamburger {
-    display: none;
-  }
-
-  .menu {
-    display: flex !important;
-    flex-direction: row;
-    border: none;
-  }
-
-  .menu a {
-    border: none;
-  }
-}
-
-/* ================= MAIN ================= */
-main {
-  margin-top: 70px;
-  padding: 20px;
-  text-align: center;
-}
-
-/* ================= HERO ================= */
-.hero img {
-  max-width: 400px;
-  width: 100%;
-}
-</style>
+</script>
 
 </head>
 
@@ -114,38 +46,125 @@ main {
 <!-- ================= HEADER ================= -->
 <header class="header">
   <div class="nav">
+
     <div class="logo">Tube Amps & FX</div>
 
-    <button class="hamburger" onclick="toggleMenu()">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
       ☰
     </button>
 
     <nav id="menu" class="menu">
-      <a href="#">HOME</a>
-      <a href="#">ABOUT</a>
-      <a href="#">ARTIGOS</a>
-      <a href="#">CONTATO</a>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="articles/">ARTIGOS</a>
+      <a href="contato.html">CONTATO</a>
     </nav>
+
   </div>
 </header>
 
 <!-- ================= MAIN ================= -->
 <main>
 
+  <!-- HERO -->
   <section class="hero">
-    <img src="logo_tube_amps_fx.webp" alt="logo">
-    <p>Comunidade maker de áudio analógico</p>
+    <h1 class="visually-hidden">Tube Amps & FX</h1>
+
+    <img src="logo_tube_amps_fx.webp"
+         alt="Logo da comunidade Tube Amps & FX"
+         loading="eager">
+
+    <p class="hero-text">Comunidade maker de áudio analógico</p>
+
+    <a href="articles/" class="cta-btn">Explorar artigos</a>
+  </section>
+
+  <!-- SLIDESHOW -->
+  <section class="slideshow" aria-label="Projetos em destaque">
+
+    <div class="slide mySlides">
+      <img src="images/slide1.webp"
+           alt="Amplificador valvulado artesanal">
+    </div>
+
+    <div class="slide mySlides">
+      <img src="images/slide2.webp"
+           alt="Montagem de pedal analógico">
+    </div>
+
+    <div class="slide mySlides">
+      <img src="images/slide3.webp"
+           alt="Circuito eletrônico de áudio">
+    </div>
+
+  </section>
+
+  <!-- SOBRE -->
+  <section class="content narrow">
+    <h2>Sobre a comunidade</h2>
+
+    <p>
+      Comunidade dedicada ao estudo e construção de amplificadores valvulados,
+      pedais analógicos e eletrônica aplicada ao áudio.
+    </p>
+
+    <p>
+      O foco é engenharia de circuito, análise técnica e prática de bancada.
+      Menos marketing, mais eletrônica real.
+    </p>
+  </section>
+
+  <!-- DESTAQUES -->
+  <section class="cards">
+
+    <article class="card">
+      <h3>Amplificadores Valvulados</h3>
+      <p>Projetos, análise de circuitos, manutenção e modificações.</p>
+    </article>
+
+    <article class="card">
+      <h3>Pedais Analógicos</h3>
+      <p>Overdrives, fuzzes, boosters e efeitos artesanais.</p>
+    </article>
+
+    <article class="card">
+      <h3>Cultura DIY</h3>
+      <p>Conhecimento aberto, prática real e aprendizado coletivo.</p>
+    </article>
+
+  </section>
+
+  <!-- RODAPÉ INTERNO -->
+  <section class="content narrow footer-internal">
+
+    <div class="footer-grid">
+
+      <div>
+        <i class="fa fa-github"></i>
+        GitHub Pages
+      </div>
+
+      <div>
+        <p>
+          Este projeto é mantido de forma independente e sem fins comerciais.
+        </p>
+      </div>
+
+    </div>
+
   </section>
 
 </main>
 
-<!-- ================= SCRIPT ================= -->
-<script>
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.classList.toggle("active");
-}
-</script>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>
+    © Tube Amps & FX — Comunidade independente de áudio analógico
+  </p>
+</footer>
+
+<!-- ================= JS ================= -->
+<script src="script.js"></script>
 
 </body>
 </html>
