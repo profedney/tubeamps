@@ -6,6 +6,16 @@ body {
   color: #fff;
 }
 
+/* ================= IMAGENS RESPONSIVAS ================= */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
 /* ================= HEADER ================= */
 .header {
   position: fixed;
@@ -86,6 +96,21 @@ main {
 
 /* ================= HERO ================= */
 .hero img {
-  max-width: 400px;
-  width: 100%;
+  max-width: 100%;
+  width: auto;
 }
+
+/* ================= ACESSIBILIDADE ================= */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
