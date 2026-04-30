@@ -113,4 +113,29 @@ main {
   border: 0;
 }
 
+/* ================= SLIDESHOW ================= */
+.slideshow {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Cada slide ocupa o mesmo espaço */
+.mySlides {
+  display: none; /* essencial */
+  width: 100%;
+}
+
+/* Imagem responsiva */
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+/* Slide ativo */
+.mySlides.active {
+  display: block;
+}
+
+
 
