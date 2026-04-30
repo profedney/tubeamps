@@ -11,3 +11,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+// ================= SLIDESHOW =================
+let slideIndex = 0;
+
+function showSlides() {
+  const slides = document.querySelectorAll(".mySlides");
+
+  if (slides.length === 0) return;
+
+  // remove classe active de todos
+  slides.forEach(slide => slide.classList.remove("active"));
+
+  // avança índice
+  slideIndex++;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  // ativa slide atual
+  slides[slideIndex - 1].classList.add("active");
+
+  // loop automático
+  setTimeout(showSlides, 4000); // 4s
+}
+
+// inicia slideshow após carregar DOM
+document.addEventListener("DOMContentLoaded", function () {
+  showSlides();
+});
+
