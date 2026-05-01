@@ -14,8 +14,6 @@ img {
   margin: 0 auto;
 }
 
-
-
 /* ================= HEADER ================= */
 .header {
   position: fixed;
@@ -59,6 +57,7 @@ img {
   text-decoration: none;
   color: #fff;
   border-bottom: 1px solid #111;
+  transition: background 0.2s ease;
 }
 
 .menu a:hover {
@@ -95,9 +94,71 @@ main {
 }
 
 /* ================= HERO ================= */
+.hero {
+  padding: 40px 20px;
+}
+
 .hero img {
   max-width: 100%;
   width: auto;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin: 20px 0 30px;
+  line-height: 1.6;
+}
+
+/* ================= BOTÃO CTA ================= */
+.cta-btn {
+  display: inline-block;
+
+  padding: 18px 36px;
+
+  background: linear-gradient(135deg, #ff7a18, #ff3d00);
+
+  color: #ffffff;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 6px 18px rgba(255, 61, 0, 0.35),
+    0 0 12px rgba(255, 122, 24, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+
+  margin-top: 20px;
+}
+
+/* Hover desktop */
+.cta-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+
+  box-shadow:
+    0 10px 24px rgba(255, 61, 0, 0.45),
+    0 0 18px rgba(255, 122, 24, 0.35);
+
+  filter: brightness(1.05);
+}
+
+/* Clique */
+.cta-btn:active {
+  transform: scale(0.98);
+}
+
+/* Acessibilidade teclado */
+.cta-btn:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
 }
 
 /* ================= ACESSIBILIDADE ================= */
@@ -122,7 +183,7 @@ main {
 
 /* Cada slide ocupa o mesmo espaço */
 .mySlides {
-  display: none; /* essencial */
+  display: none;
   width: 100%;
 }
 
@@ -137,5 +198,18 @@ main {
   display: block;
 }
 
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
 
+  .cta-btn {
+    width: 100%;
+    max-width: 320px;
 
+    text-align: center;
+
+    font-size: 1.1rem;
+
+    padding: 16px 24px;
+  }
+
+}
