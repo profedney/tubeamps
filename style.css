@@ -1,33 +1,126 @@
-/* ================= BASE ================= */
-body {
-  margin: 0;
-  font-family: "Lato", sans-serif;
-  background: #000;
-  color: #fff;
+/* =========================================================
+   RESET / BASE
+========================================================= */
+
+:root {
+
+  /* Cores principais */
+  --bg-color: #000000;
+  --text-color: #ffffff;
+
+  /* Links */
+  --link-color: #f2f2f2;
+  --link-hover: #ffffff;
+  --link-visited: #bdbdbd;
+
+  /* Interface */
+  --border-color: #222222;
+  --border-soft: #111111;
+
+  /* Texto secundário */
+  --muted-text: #cccccc;
+
+  /* CTA */
+  --cta-gradient-start: #ff7a18;
+  --cta-gradient-end: #ff3d00;
+
+  /* Sombras */
+  --cta-shadow:
+    0 6px 18px rgba(255, 61, 0, 0.35),
+    0 0 12px rgba(255, 122, 24, 0.25);
+
+  --cta-shadow-hover:
+    0 10px 24px rgba(255, 61, 0, 0.45),
+    0 0 18px rgba(255, 122, 24, 0.35);
 }
 
-/* ================= IMAGENS RESPONSIVAS ================= */
+body {
+  margin: 0;
+
+  font-family: "Lato", sans-serif;
+
+  background: var(--bg-color);
+  color: var(--text-color);
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LINKS GLOBAIS
+========================================================= */
+
+a {
+  color: var(--link-color);
+
+  text-decoration: underline;
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* Hover */
+a:hover {
+  color: var(--link-hover);
+
+  opacity: 0.95;
+}
+
+/* Link visitado */
+a:visited {
+  color: var(--link-visited);
+}
+
+/* Navegação teclado */
+a:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   IMAGENS RESPONSIVAS
+========================================================= */
+
 img {
+  display: block;
+
   max-width: 100%;
   height: auto;
-  display: block;
+
   margin: 0 auto;
 }
 
-/* ================= HEADER ================= */
+
+/* =========================================================
+   HEADER
+========================================================= */
+
 .header {
   position: fixed;
+
   top: 0;
   width: 100%;
-  background: #000;
-  border-bottom: 1px solid #222;
+
+  background: var(--bg-color);
+
+  border-bottom: 1px solid var(--border-color);
+
   z-index: 1000;
 }
 
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
 .nav {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   padding: 12px 16px;
 }
 
@@ -35,40 +128,75 @@ img {
   font-weight: bold;
 }
 
-/* ================= HAMBURGER ================= */
+
+/* =========================================================
+   BOTÃO HAMBURGER
+========================================================= */
+
 .hamburger {
-  font-size: 22px;
-  cursor: pointer;
   background: none;
   border: none;
-  color: #fff;
+
+  color: var(--text-color);
+
+  font-size: 22px;
+
+  cursor: pointer;
 }
 
-/* ================= MENU ================= */
+
+/* =========================================================
+   MENU
+========================================================= */
+
 .menu {
   display: none;
+
   flex-direction: column;
-  background: #000;
-  border-top: 1px solid #222;
+
+  background: var(--bg-color);
+
+  border-top: 1px solid var(--border-color);
 }
 
+/* Links do menu */
 .menu a {
+
   padding: 12px 16px;
+
+  color: var(--text-color);
+
   text-decoration: none;
-  color: #fff;
-  border-bottom: 1px solid #111;
-  transition: background 0.2s ease;
+
+  border-bottom: 1px solid var(--border-soft);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
+/* Hover menu */
 .menu a:hover {
-  background: #111;
+  background: #111111;
+
+  color: #ffffff;
 }
 
+/* Visitado menu */
+.menu a:visited {
+  color: #d6d6d6;
+}
+
+/* Menu ativo mobile */
 .menu.active {
   display: flex;
 }
 
-/* ================= DESKTOP ================= */
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
 @media (min-width: 768px) {
 
   .hamburger {
@@ -77,7 +205,9 @@ img {
 
   .menu {
     display: flex !important;
+
     flex-direction: row;
+
     border: none;
   }
 
@@ -86,66 +216,91 @@ img {
   }
 }
 
-/* ================= MAIN ================= */
+
+/* =========================================================
+   MAIN
+========================================================= */
+
 main {
   margin-top: 70px;
+
   padding: 20px;
+
   text-align: center;
 }
 
-/* ================= HERO ================= */
+
+/* =========================================================
+   HERO
+========================================================= */
+
 .hero {
   padding: 40px 20px;
 }
 
 .hero img {
-  max-width: 100%;
   width: auto;
+
+  max-width: 100%;
 }
 
 .hero-text {
-  font-size: 1.1rem;
-  color: #ccc;
+
   margin: 20px 0 30px;
+
+  font-size: 1.1rem;
+
+  color: var(--muted-text);
+
   line-height: 1.6;
 }
 
-/* ================= BOTÃO CTA ================= */
+
+/* =========================================================
+   BOTÃO CTA
+========================================================= */
+
 .cta-btn {
   display: inline-block;
 
+  margin-top: 20px;
+
   padding: 18px 36px;
 
-  background: linear-gradient(135deg, #ff7a18, #ff3d00);
+  background:
+    linear-gradient(
+      135deg,
+      var(--cta-gradient-start),
+      var(--cta-gradient-end)
+    );
 
   color: #ffffff;
 
   font-size: 1.2rem;
   font-weight: 700;
+
   letter-spacing: 0.5px;
+
   text-decoration: none;
 
   border-radius: 14px;
 
-  box-shadow:
-    0 6px 18px rgba(255, 61, 0, 0.35),
-    0 0 12px rgba(255, 122, 24, 0.25);
+  box-shadow: var(--cta-shadow);
 
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
     filter 0.2s ease;
-
-  margin-top: 20px;
 }
 
 /* Hover desktop */
 .cta-btn:hover {
-  transform: translateY(-3px) scale(1.02);
 
-  box-shadow:
-    0 10px 24px rgba(255, 61, 0, 0.45),
-    0 0 18px rgba(255, 122, 24, 0.35);
+  transform:
+    translateY(-3px)
+    scale(1.02);
+
+  box-shadow: var(--cta-shadow-hover);
 
   filter: brightness(1.05);
 }
@@ -158,38 +313,63 @@ main {
 /* Acessibilidade teclado */
 .cta-btn:focus {
   outline: 3px solid #ffffff;
+
   outline-offset: 4px;
 }
 
-/* ================= ACESSIBILIDADE ================= */
+/* Visitado CTA */
+.cta-btn:visited {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
 .visually-hidden {
+
   position: absolute;
+
   width: 1px;
   height: 1px;
+
   padding: 0;
   margin: -1px;
+
   overflow: hidden;
+
   clip: rect(0, 0, 0, 0);
+
   white-space: nowrap;
+
   border: 0;
 }
 
-/* ================= SLIDESHOW ================= */
+
+/* =========================================================
+   SLIDESHOW
+========================================================= */
+
 .slideshow {
   position: relative;
+
   max-width: 100%;
+
   overflow: hidden;
 }
 
-/* Cada slide ocupa o mesmo espaço */
+/* Cada slide ocupa mesmo espaço */
 .mySlides {
   display: none;
+
   width: 100%;
 }
 
-/* Imagem responsiva */
+/* Imagens responsivas */
 .mySlides img {
   width: 100%;
+
   height: auto;
 }
 
@@ -198,18 +378,22 @@ main {
   display: block;
 }
 
-/* ================= RESPONSIVO ================= */
+
+/* =========================================================
+   RESPONSIVO MOBILE
+========================================================= */
+
 @media (max-width: 768px) {
 
   .cta-btn {
+
     width: 100%;
     max-width: 320px;
+
+    padding: 16px 24px;
 
     text-align: center;
 
     font-size: 1.1rem;
-
-    padding: 16px 24px;
   }
-
 }
